@@ -54,7 +54,7 @@ if __name__ == "__main__":
         target_start = random.randint(start, end-150)
         for seq_record in SeqIO.parse(fasta_filename, "fasta"):
             if seq_record.id == dic[chr_name]:
-                fname = output_dir + '/' + 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + '_' + str(target_start+150) + '.fasta'
+                fname = output_dir + '/' + 'target' + str(target_id) + '.fasta'
                 f = open(fname, 'w')
                 f.write('> ' + 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + '_' + str(target_start+150) + '\n')
                 f.write(str(seq_record.seq[target_start:target_start+150]))
@@ -85,7 +85,7 @@ if __name__ == "__main__":
         target_start = random.randint(start, end-150)
         for seq_record in SeqIO.parse(fasta_filename, "fasta"):
             if seq_record.id == dic[chr_name]:
-                fname = output_dir + '/' + 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + '_' + str(target_start+150) + '.fasta'
+                fname = output_dir + '/' + 'target' + str(target_id) + '.fasta'
                 f = open(fname, 'w')
                 f.write('> ' + 'target' + str(target_id) + '_' + chr_name + "_" + str(target_start) + '_' + str(target_start+150) + '\n')
                 f.write(str(seq_record.seq[target_start:target_start+150]))

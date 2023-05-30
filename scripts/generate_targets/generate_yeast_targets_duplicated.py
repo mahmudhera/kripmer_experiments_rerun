@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
         for seq_record in SeqIO.parse(fasta_filename, "fasta"):
             if seq_record.id == contig_name:
-                fname = output_dir + '/' + f'target{file_id}_' + contig_name + "_" + str(start_pos-75) + '_' + str(start_pos+75) + '.fasta'
+                fname = output_dir + '/' + f'target{file_id}.fasta'
                 f = open(fname, 'w')
                 f.write('> ' + f'target{file_id}_' + contig_name + "_" + str(start_pos-75) + '_' + str(start_pos+75) + '\n')
                 file_id += 1
